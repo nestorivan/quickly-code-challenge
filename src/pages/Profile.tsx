@@ -74,7 +74,7 @@ const Profile: React.FC = () => {
           </Flex>
           <CardFooter justifyContent="flex-end">
             <ButtonGroup spacing="2">
-              <Button onClick={handleLogOut}>Log out</Button>
+              <Button colorScheme="red" onClick={handleLogOut}>Log out</Button>
             </ButtonGroup>
           </CardFooter>
         </CardBody>

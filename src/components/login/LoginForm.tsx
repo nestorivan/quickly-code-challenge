@@ -14,6 +14,8 @@ import {
   Input,
   Heading,
   useToast,
+  Text,
+  Link as ChakraLink,
 } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
@@ -98,7 +100,7 @@ const LoginForm: React.FC = () => {
             type="submit"
             mt={4}
             w="100%"
-            colorScheme="teal"
+            colorScheme="telegram"
             variant="solid"
             isLoading={isSubmitting}
           >
@@ -109,8 +111,12 @@ const LoginForm: React.FC = () => {
       <Box position="relative">
         <Divider />
       </Box>
-      <span>Don't have an account?</span>
-      <Link to="/register">Register here</Link>
+      <Text mt={5}>
+        Don't have an account?{" "}
+        <ChakraLink color="blue.400" as={Link} to="/register">
+          Register here
+        </ChakraLink>
+      </Text>
     </>
   );
 };
