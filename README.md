@@ -2,6 +2,9 @@
 
 Small code challenge that consist in 3 routes, 2 forms with validation and a user dashboard (barebones)
 
+## Instructions
+To run this projects simply install dependencies and run
+```npm run dev```
 
 ## Compromises
 In order to finish this project quickly a few compromises were made:
