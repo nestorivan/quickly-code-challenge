@@ -17,10 +17,12 @@ import { getUser } from "../services/auth";
 import { User } from "../models/user";
 import { useNavigate } from "react-router-dom";
 import ProfileAvatar from "../components/profile/ProfileAvatar";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const Profile: React.FC = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState<User | null>();
+  const { removeValue } = useLocalStorage();
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -40,7 +42,7 @@ const Profile: React.FC = () => {
   }, []);
 
   const handleLogOut = () => {
-    window.localStorage.removeItem("token");
+    removeValue("token");
     navigate("/login");
   };
 
